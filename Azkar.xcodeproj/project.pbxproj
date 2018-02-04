@@ -14,6 +14,8 @@
 		E09EF3B720273BD400C9E88B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E09EF3B520273BD400C9E88B /* LaunchScreen.storyboard */; };
 		E09EF3BF20273C7600C9E88B /* MorningAzkarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09EF3BE20273C7600C9E88B /* MorningAzkarVC.swift */; };
 		E09EF3C120273C8A00C9E88B /* EveningAzkarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09EF3C020273C8A00C9E88B /* EveningAzkarVC.swift */; };
+		E0B1720620275A15008FD95A /* MorningTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B1720520275A15008FD95A /* MorningTableViewCell.swift */; };
+		E0B1720F202781E6008FD95A /* AzkarTexts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B1720E202781E6008FD95A /* AzkarTexts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		E09EF3B820273BD400C9E88B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E09EF3BE20273C7600C9E88B /* MorningAzkarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorningAzkarVC.swift; sourceTree = "<group>"; };
 		E09EF3C020273C8A00C9E88B /* EveningAzkarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EveningAzkarVC.swift; sourceTree = "<group>"; };
+		E0B1720520275A15008FD95A /* MorningTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorningTableViewCell.swift; sourceTree = "<group>"; };
+		E0B1720E202781E6008FD95A /* AzkarTexts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AzkarTexts.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,12 +66,22 @@
 				E09EF3B020273BD400C9E88B /* Main.storyboard */,
 				E09EF3AE20273BD400C9E88B /* ViewController.swift */,
 				E09EF3BE20273C7600C9E88B /* MorningAzkarVC.swift */,
+				E0B1720720275A4B008FD95A /* Cells */,
 				E09EF3C020273C8A00C9E88B /* EveningAzkarVC.swift */,
+				E0B1720E202781E6008FD95A /* AzkarTexts.swift */,
 				E09EF3B320273BD400C9E88B /* Assets.xcassets */,
 				E09EF3B520273BD400C9E88B /* LaunchScreen.storyboard */,
 				E09EF3B820273BD400C9E88B /* Info.plist */,
 			);
 			path = Azkar;
+			sourceTree = "<group>";
+		};
+		E0B1720720275A4B008FD95A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				E0B1720520275A15008FD95A /* MorningTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,6 +156,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0B1720F202781E6008FD95A /* AzkarTexts.swift in Sources */,
+				E0B1720620275A15008FD95A /* MorningTableViewCell.swift in Sources */,
 				E09EF3BF20273C7600C9E88B /* MorningAzkarVC.swift in Sources */,
 				E09EF3C120273C8A00C9E88B /* EveningAzkarVC.swift in Sources */,
 				E09EF3AF20273BD400C9E88B /* ViewController.swift in Sources */,

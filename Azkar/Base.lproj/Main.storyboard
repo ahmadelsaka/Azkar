@@ -18,18 +18,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cE8-pg-EdX">
-                                <rect key="frame" x="99" y="167" width="176" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cE8-pg-EdX">
+                                <rect key="frame" x="102" y="167" width="170" height="57"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="37"/>
                                 <state key="normal" title="اذكار الصباح"/>
                                 <connections>
                                     <segue destination="r36-RU-dkd" kind="show" id="pgg-iq-Omu"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0TC-g7-xYt">
-                                <rect key="frame" x="96" y="469" width="182" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0TC-g7-xYt">
+                                <rect key="frame" x="104.5" y="442" width="165" height="57"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="37"/>
                                 <state key="normal" title="اذكار المساء"/>
                                 <connections>
@@ -38,6 +36,12 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="cE8-pg-EdX" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="3J7-RY-21l"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0TC-g7-xYt" secondAttribute="bottom" constant="168" id="6Uh-Vm-JJf"/>
+                            <constraint firstItem="0TC-g7-xYt" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="P9e-5m-5ga"/>
+                            <constraint firstItem="cE8-pg-EdX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="103" id="pgf-XO-Y0z"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="Qyc-Bg-g0h"/>
@@ -46,34 +50,75 @@
             </objects>
             <point key="canvasLocation" x="476" y="133.5832083958021"/>
         </scene>
-        <!--View Controller-->
+        <!--Morning AzkarVC-->
         <scene sceneID="cOV-3O-CQw">
             <objects>
-                <viewController id="r36-RU-dkd" sceneMemberID="viewController">
+                <viewController id="r36-RU-dkd" customClass="MorningAzkarVC" customModule="Azkar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oSB-eO-TG2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Morning Page" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sSc-oY-dDi">
-                                <rect key="frame" x="127" y="282" width="121" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0Ae-vJ-e6O">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MorningCell" id="WyH-2Q-auc" customClass="MorningTableViewCell" customModule="Azkar" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WyH-2Q-auc" id="ECq-NA-BvS">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ليبل" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="25k-gq-XvN">
+                                                    <rect key="frame" x="8" y="10" width="359" height="8.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dId-Kh-qVZ">
+                                                    <rect key="frame" x="289" y="13.5" width="46" height="30"/>
+                                                    <state key="normal" title="تكرار : 1"/>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="25k-gq-XvN" secondAttribute="bottom" constant="25" id="1yh-8p-JcW"/>
+                                                <constraint firstItem="25k-gq-XvN" firstAttribute="top" secondItem="ECq-NA-BvS" secondAttribute="top" constant="10" id="Cww-cO-fJm"/>
+                                                <constraint firstAttribute="trailing" secondItem="25k-gq-XvN" secondAttribute="trailing" constant="8" id="ItX-aA-zgm"/>
+                                                <constraint firstAttribute="trailing" secondItem="dId-Kh-qVZ" secondAttribute="trailing" constant="40" id="MA4-Sh-hqv"/>
+                                                <constraint firstAttribute="bottom" secondItem="dId-Kh-qVZ" secondAttribute="bottom" id="pOC-u3-Ss6"/>
+                                                <constraint firstItem="25k-gq-XvN" firstAttribute="leading" secondItem="ECq-NA-BvS" secondAttribute="leading" constant="8" id="u6B-sd-odR"/>
+                                                <constraint firstItem="dId-Kh-qVZ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ECq-NA-BvS" secondAttribute="leading" constant="20" symbolic="YES" id="wHD-8T-S63"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="ZekrCounter" destination="dId-Kh-qVZ" id="fh2-Pn-ncF"/>
+                                            <outlet property="ZekrLabelView" destination="25k-gq-XvN" id="ovM-p4-HKG"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="0Ae-vJ-e6O" firstAttribute="top" secondItem="pSN-RT-Bjm" secondAttribute="top" id="GvE-uj-YUg"/>
+                            <constraint firstItem="0Ae-vJ-e6O" firstAttribute="trailing" secondItem="pSN-RT-Bjm" secondAttribute="trailing" id="J4j-dJ-PKU"/>
+                            <constraint firstItem="0Ae-vJ-e6O" firstAttribute="leading" secondItem="pSN-RT-Bjm" secondAttribute="leading" id="vzk-jE-1bW"/>
+                            <constraint firstItem="0Ae-vJ-e6O" firstAttribute="bottom" secondItem="pSN-RT-Bjm" secondAttribute="bottom" id="x0U-hB-VVJ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="pSN-RT-Bjm"/>
                     </view>
+                    <connections>
+                        <outlet property="MorningTableVIew" destination="0Ae-vJ-e6O" id="Q53-d1-3cX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4el-bb-qcL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1152.8" y="133.5832083958021"/>
         </scene>
-        <!--View Controller-->
+        <!--Evening AzkarVC-->
         <scene sceneID="hm1-zf-9fQ">
             <objects>
-                <viewController id="nvT-ow-Jyx" sceneMemberID="viewController">
+                <viewController id="nvT-ow-Jyx" customClass="EveningAzkarVC" customModule="Azkar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YFh-oq-5gg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
