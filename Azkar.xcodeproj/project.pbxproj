@@ -12,6 +12,8 @@
 		E09EF3B220273BD400C9E88B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E09EF3B020273BD400C9E88B /* Main.storyboard */; };
 		E09EF3B420273BD400C9E88B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E09EF3B320273BD400C9E88B /* Assets.xcassets */; };
 		E09EF3B720273BD400C9E88B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E09EF3B520273BD400C9E88B /* LaunchScreen.storyboard */; };
+		E09EF3BF20273C7600C9E88B /* MorningAzkarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09EF3BE20273C7600C9E88B /* MorningAzkarVC.swift */; };
+		E09EF3C120273C8A00C9E88B /* EveningAzkarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09EF3C020273C8A00C9E88B /* EveningAzkarVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		E09EF3B320273BD400C9E88B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E09EF3B620273BD400C9E88B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E09EF3B820273BD400C9E88B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E09EF3BE20273C7600C9E88B /* MorningAzkarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorningAzkarVC.swift; sourceTree = "<group>"; };
+		E09EF3C020273C8A00C9E88B /* EveningAzkarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EveningAzkarVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,8 +59,10 @@
 			isa = PBXGroup;
 			children = (
 				E09EF3AC20273BD400C9E88B /* AppDelegate.swift */,
-				E09EF3AE20273BD400C9E88B /* ViewController.swift */,
 				E09EF3B020273BD400C9E88B /* Main.storyboard */,
+				E09EF3AE20273BD400C9E88B /* ViewController.swift */,
+				E09EF3BE20273C7600C9E88B /* MorningAzkarVC.swift */,
+				E09EF3C020273C8A00C9E88B /* EveningAzkarVC.swift */,
 				E09EF3B320273BD400C9E88B /* Assets.xcassets */,
 				E09EF3B520273BD400C9E88B /* LaunchScreen.storyboard */,
 				E09EF3B820273BD400C9E88B /* Info.plist */,
@@ -136,6 +142,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E09EF3BF20273C7600C9E88B /* MorningAzkarVC.swift in Sources */,
+				E09EF3C120273C8A00C9E88B /* EveningAzkarVC.swift in Sources */,
 				E09EF3AF20273BD400C9E88B /* ViewController.swift in Sources */,
 				E09EF3AD20273BD400C9E88B /* AppDelegate.swift in Sources */,
 			);

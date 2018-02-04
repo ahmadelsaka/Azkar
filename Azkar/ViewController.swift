@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  HomepageVC.swift
 //  Azkar
 //
 //  Created by Ahmad on 2/4/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class HomepageVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
