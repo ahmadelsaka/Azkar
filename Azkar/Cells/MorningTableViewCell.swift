@@ -11,19 +11,15 @@ import UIKit
 class MorningTableViewCell: UITableViewCell {
 
     @IBOutlet weak var ZekrLabelView: UILabel!
-    
     @IBOutlet weak var ZekrCounter: UIButton!
     
-    
-   
-    
+    var MorningAzkarVC : MorningAzkarVC?
     
     func fillData(txt:String , count:String)  {
-   
-      
         ZekrLabelView.text = txt
         ZekrCounter.setTitle("تكرار: " + count, for: .normal)
-        //ZekrCounter.titleLabel?.text = count
     }
+    
+    
 }
 

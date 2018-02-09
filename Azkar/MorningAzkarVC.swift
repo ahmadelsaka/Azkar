@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MorningAzkarVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class MorningAzkarVC: UIViewController {
     
     var ZekrArray = [String]()
     var ZekrArrayCounter = [Int]()
@@ -30,22 +30,82 @@ class MorningAzkarVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MorningCell", for: indexPath) as! MorningTableViewCell
-        cell.fillData(txt:ZekrArray[indexPath.row] , count: String(ZekrArrayCounter[indexPath.row]) )
-//        cell.ZekrLabelView.text = ZekrArray[indexPath.row] + String(ZekrArrayCounter[indexPath.row])
-//        cell.ZekrCounter.titleLabel?.text = String(ZekrArrayCounter[indexPath.row])
-        return cell
-    }
-
     
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if ZekrArrayCounter[indexPath.row] > 1 {
+            ZekrArrayCounter[indexPath.row] = ZekrArrayCounter[indexPath.row] - 1
+            tableView.reloadData()
+        } else {
+           removeRow(indexPath: indexPath)
+        }
+    }
+    
+    // The next two functions is for deletion row from table
+    
+    
+//    ----------
+//    func deleteCell (cell: MorningTableViewCell){
+//
+//        if let deletetionIndexPath = MorningTableVIew.indexPath(for: cell) {
+//            ZekrArray.remove(at: deletetionIndexPath.row)
+//            ZekrArrayCounter.remove(at: deletetionIndexPath.row)
+//            MorningTableVIew.deleteRows(at: [deletetionIndexPath], with: .automatic)
+//        }
+//    }
+//    --------
+    func removeRow (indexPath: IndexPath) {
+        ZekrArray.remove(at: indexPath.row)
+        ZekrArrayCounter.remove(at: indexPath.row)
+
+        self.MorningTableVIew.beginUpdates()
+        self.MorningTableVIew.deleteRows(at: [indexPath], with: .automatic)
+        self.MorningTableVIew.endUpdates()
+    }
+///   -----------
+//    THiS IS WORKING BUT WITH SWIPE
+//    ------------
+//    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+//        return true // This allows us to delete from the table
+//    }
+//
+//    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+//
+//        if editingStyle == .delete {
+//            ZekrArray.remove(at: indexPath.row)
+//            ZekrArrayCounter.remove(at: indexPath.row)
+//
+//            tableView.beginUpdates()
+//            tableView.deleteRows(at: [indexPath], with: .automatic)
+//            tableView.endUpdates()
+//        }
+//
+//    }
+    
+    
+    
+    
+    
+}
+
+// MARK:- Table Setup
+extension MorningAzkarVC: UITableViewDelegate, UITableViewDataSource {
+  
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return ZekrArray.count
     }
     
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MorningCell", for: indexPath) as! MorningTableViewCell
+        cell.fillData(txt:ZekrArray[indexPath.row] , count: String(ZekrArrayCounter[indexPath.row]) )
+        cell.MorningAzkarVC = self
+        return cell
+    }
 }
 
+// MARK:- Azkars Texts and Counter Arrays
 extension MorningAzkarVC {
     
         func zekrTexts () {
